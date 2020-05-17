@@ -61,7 +61,8 @@ nav a:hover{
     padding-left: 10px;
     width: 65px;
     height: 65px;
-    transition: 0.3s;
+    transition: 1s;
+    color: black;
  }
  #Audio {
      text-align: center;
