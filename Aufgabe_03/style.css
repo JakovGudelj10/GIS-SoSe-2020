@@ -67,7 +67,6 @@ nav a:hover{
      text-align: center;
      font-family: Arial, Helvetica, sans-serif;
      color: blueviolet;
-     font-size: larger;
  }
  #Audio audio{
      text-align: center;
@@ -84,7 +83,7 @@ nav a:hover{
     color: blueviolet;
     font-size: medium;
  }
- Audio a:hover{
-    color:orangered;
-    font-family: sans-serif, monospace;  
-}
+ #Video {
+    width: 800px; 
+ }
+
