@@ -87,4 +87,13 @@ nav a:hover{
     width: 800px; 
     text-align: center;
  }
+ #Bilder{
+     text-align: center;
+ }
+ #FooterPortfolio{
+     text-align: center;
+     font-family: sans-serif;
+     color: black;
+     font-size: medium;
+ }
 
