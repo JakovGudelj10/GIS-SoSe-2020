@@ -38,16 +38,16 @@ nav a:hover{
     text-align: center; 
 }
 #Kreisinhalt h1{
-    font-size: 100px;
+    font-size: 102px;
     padding-top: 45%;
     font-family: sans-serif;
     color: white;
     text-align: center;
 }
 #Kreisinhalt p{
-    font-size: 50px;
+    font-size: 39px;
     font-family: sans-serif;
-    margin: -120px auto auto 45%;
+    margin: -75px auto auto 20%;
     color: white;
     text-align: center;
 }
@@ -63,25 +63,11 @@ nav a:hover{
     height: 65px;
     transition: 0.3s;
  }
- #Audio h3{
+ #Audio {
      text-align: center;
      font-family: Arial, Helvetica, sans-serif;
      color: blueviolet;
- }
- #Audio audio{
-     text-align: center;
- }
- #Audio p{
-     text-align: center;
-     font-family: Arial, Helvetica, sans-serif;
-     color: blueviolet;
-     font-size: medium;
- }
- #Audio a{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: blueviolet;
-    font-size: medium;
+
  }
  #Video {
     width: 800px; 
@@ -89,6 +75,7 @@ nav a:hover{
  }
  #Bilder{
      text-align: center;
+     color: blueviolet;
  }
  #FooterPortfolio{
      text-align: center;
@@ -96,4 +83,35 @@ nav a:hover{
      color: black;
      font-size: medium;
  }
+ .input{
+       
+    margin-left: 35%;
+    margin-bottom: 5px;
+    display: block;
+    background-color: grey;
+    
+    
+}
+#input{
+    margin-left: 35%;
+    margin-bottom: 5px;
+    display: block;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    background-color: grey;
+}
+#input2{
+    margin-left: 35%;
+    margin-bottom: 5px;
+    display: block;
+    border: none;
+    background-color: grey;
+
+}
+#AK{
+    text-align: center;
+    color: blueviolet;
+    font-size: larger;
+}
+
 
