@@ -1,0 +1,74 @@
+body{
+    font-family: sans-serif;
+    background-image: url(hintergrund.png);
+}
+
+nav{
+    width: 400px;
+    height: 25px;
+    background-color: black;
+    margin: -20px auto auto 750px;
+    border-radius: 0 0 10px 10px;
+    padding: 10px 20px 10px 30px;
+    color: white;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif, monospace;
+    position: sticky;
+    top: 0;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    font-family: sans-serif, monospace;
+    position: sticky;
+    top: 0;
+    padding-left: 5px;
+}
+nav a:hover{
+    color:blueviolet;
+    font-family: sans-serif, monospace;  
+}
+#Kreisinhalt{
+    width: 660px;
+    height: 660px;
+    margin: -330px auto auto auto;
+    background-color: blueviolet;
+    border-radius: 50%; 
+    text-align: center; 
+}
+#Kreisinhalt h1{
+    font-size: 100px;
+    padding-top: 45%;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+}
+#Kreisinhalt p{
+    font-size: 50px;
+    font-family: sans-serif;
+    margin: -120px auto auto 45%;
+    color: white;
+    text-align: center;
+}
+ #Kreisinhalt img{
+    width: 65px;
+    height: 65px;
+    padding-top: 50px;
+    padding-left: 10px;   
+ }
+ #Kreisinhalt img:hover{
+    padding-left: 10px;
+    width: 65px;
+    height: 65px;
+    transition: 0.3s;
+ }
+ #Audio h3{
+     text-align: center;
+     font-family: Arial, Helvetica, sans-serif;
+     color: blueviolet;
+     font-size: larger;
+ }
+ #Audio audio{
+     text-align: center;
+ }
