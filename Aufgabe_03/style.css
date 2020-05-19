@@ -119,6 +119,19 @@ nav a:hover{
     color: blueviolet;
     font-size: larger;
 }
+#datenschutz{
+    margin-left: 35%;
+    font-size: 10px;
+    color: grey;
+}
+#Button{
+    margin-left: 35%;
+    margin-bottom: 5px;
+    display: block;
+    border: none;
+    background-color: grey;
+
+}
 
 
 
