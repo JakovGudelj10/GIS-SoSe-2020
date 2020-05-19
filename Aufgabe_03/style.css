@@ -59,9 +59,9 @@ nav a:hover{
  }
  #Kreisinhalt img:hover{
     padding-left: 10px;
-    width: 65px;
-    height: 65px;
-    transition: 1s;
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
     color: black;
  }
  #Audio {
