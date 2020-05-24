@@ -1,0 +1,188 @@
+body{
+    background-image: url(mcdonaldsbackground.png);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#kopf {
+    width: 100%;
+    position: relative;
+}
+
+#kopf h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 150px;
+    position: relative;
+}
+
+#kopf p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 100px;
+    position: relative;
+}
+
+.einkaufswagen {
+    position: relative;
+    z-index: 30;
+    padding-bottom: 450px;
+    margin-top: -450px;
+    text-align: right;
+    margin-right: 60px;
+}
+
+
+.navi {
+    position: relative;
+    z-index: 20;
+    padding-bottom: 450px;
+    margin-top: -600px;
+    text-align: left;
+    margin-left: 60px;
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+.navi a:hover {
+    opacity: 0.5;
+}
+
+.einkaufswagen a:hover{
+    opacity: 0.5;
+}
+
+h1 {
+    color: purple;
+}
+
+.burger {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main h1{
+    text-align: left;
+
+}
+
+.artikel {
+    width: 25%;
+    height: 300px;
+    text-align: center;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-style: d;
+    border-color: purple;
+    border: 1;
+    float: left;
+}
+
+.artikel button {
+    background-color: greenyellow;
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.preis {
+    font-size: 140%;
+    color:red;
+}
+
+.Sonstiges {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1+p{
+    color:purple
+    text-align: center;
+}
+
+.bild {
+    max-width: 80%;
+}
+.bild :hover{
+    opacity: 0.5;
+
+}
+footer{
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 600px){
+    .einkaufswagen {
+        margin-top: -350px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .einkaufswagen {
+        margin-top: -575px;
+        padding-bottom: 600px;
+    }
+}
+
+@media screen and (max-height: 415px) {
+    .einkaufswagen {
+        margin-top: -575px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) and (max-height:1024px){
+    .navi {
+        margin-top: -700px;
+        padding-bottom: 600px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .artikel {
+        width: 90%;
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+    .artikel {
+        width: 40%;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .artikel{
+        padding-bottom: 7%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #kopf h1 {
+        font-size: 90px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .navi {
+        margin-top: -480px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .navi {
+        margin-top: -640px;
+        padding-bottom: 600px;
+    }
+}
