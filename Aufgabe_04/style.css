@@ -103,7 +103,7 @@ main h1{
 }
 
 h1+p{
-    color:purple
+    color:purple;
     text-align: center;
 }
 
