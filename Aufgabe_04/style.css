@@ -30,6 +30,18 @@ body{
     text-align: right;
     margin-right: 60px;
 }
+@media screen and (max-width: 600px){
+    .einkaufswagen {
+        margin-top: -350px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .einkaufswagen {
+        margin-top: -575px;
+        padding-bottom: 600px;
+    }
+}
 
 
 .navi {
@@ -40,6 +52,19 @@ body{
     text-align: left;
     margin-left: 60px;
     font-size: 40px;
+}
+@media screen and (max-width: 600px){
+    .navi {
+        margin-top: -480px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .navi {
+        margin-top: -640px;
+        padding-bottom: 600px;
+    }
 }
 
 a {
@@ -68,6 +93,26 @@ h1 {
 main h1{
     text-align: left;
 
+}
+
+@media screen and (max-width: 600px){
+    .artikel {
+        width: 90%;
+        height: 450px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1025px){
+    .artikel {
+        width: 40%;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1900px){
+    .artikel{
+        padding-bottom: 7%;
+    }
 }
 
 .artikel {
@@ -121,72 +166,8 @@ footer{
     text-align: center;
 }
 
-
-
-@media screen and (max-width: 600px){
-    .einkaufswagen {
-        margin-top: -350px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px){
-    .einkaufswagen {
-        margin-top: -575px;
-        padding-bottom: 600px;
-    }
-}
-
-@media screen and (max-height: 415px) {
-    .einkaufswagen {
-        margin-top: -575px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 768px) and (max-height:1024px){
-    .navi {
-        margin-top: -700px;
-        padding-bottom: 600px;
-    }
-}
-
-
-@media screen and (max-width: 600px){
-    .artikel {
-        width: 90%;
-        height: 450px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1025px){
-    .artikel {
-        width: 40%;
-        height: 400px;
-    }
-}
-
-@media screen and (min-width: 1900px){
-    .artikel{
-        padding-bottom: 7%;
-    }
-}
-
 @media screen and (max-width: 600px){
     #kopf h1 {
         font-size: 90px;
-    }
-}
-
-
-@media screen and (max-width: 600px){
-    .navi {
-        margin-top: -480px;
-        font-size: 10px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px){
-    .navi {
-        margin-top: -640px;
-        padding-bottom: 600px;
     }
 }
