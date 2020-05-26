@@ -122,9 +122,6 @@ main h1{
     margin-top: 4%;
     padding-top: 2%;
     padding-bottom: 5%;
-    border-style: d;
-    border-color: purple;
-    border: 1;
     float: left;
 }
 
@@ -157,7 +154,7 @@ p{
 }
 
 .bild {
-    max-width: 70%;
+    max-width: 80%;
 }
 
 footer{
@@ -176,4 +173,6 @@ footer{
 
 }
 
-
+.Sonstiges{
+    float: left;
+}
