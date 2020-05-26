@@ -56,7 +56,7 @@ body{
 @media screen and (max-width: 600px){
     .navi {
         margin-top: -480px;
-        font-size: 10px;
+        font-size: 5px;
     }
 }
 
@@ -145,6 +145,7 @@ main h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    float: left;
 }
 
 h1{
@@ -156,12 +157,9 @@ p{
 }
 
 .bild {
-    max-width: 80%;
+    max-width: 70%;
 }
-.bild :hover{
-    opacity: 0.5;
 
-}
 footer{
     text-align: center;
 }
@@ -171,3 +169,11 @@ footer{
         font-size: 90px;
     }
 }
+@media screen and (max-width:600px){
+    footer{
+        position: fixed;
+    }
+
+}
+
+
