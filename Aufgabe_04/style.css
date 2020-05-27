@@ -153,6 +153,9 @@ footer{
     #kopf h1 {
         font-size: 40px;
     }
+    #kopf p{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width:600px){
     footer{
