@@ -166,3 +166,11 @@ main{
     flex-direction: column;
 
 }
+@media screen and (min-width: 600px) and (max-width: 1025px){
+    #kopf h1 {
+        font-size: 60px;
+    }
+    #kopf p{
+        font-size: 40px;
+    }
+}
