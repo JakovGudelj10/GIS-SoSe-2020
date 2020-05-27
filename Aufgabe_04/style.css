@@ -30,7 +30,8 @@ body{
 }
 @media screen and (max-width: 600px){
     .einkaufswagen {
-        margin-top: -350px;
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -50,17 +51,10 @@ body{
 }
 @media screen and (max-width: 600px){
     .navi {
-        margin-top: -480px;
-        font-size: 5px;
+        font-size: 30px;
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1024px){
-    .navi {
-        margin-top: -640px;
-        padding-bottom: 600px;
-    }
-}
 
 a {
     text-decoration: none;
