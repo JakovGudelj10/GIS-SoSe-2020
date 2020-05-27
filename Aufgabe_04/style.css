@@ -22,39 +22,21 @@ body{
     position: relative;
 }
 
-.einkaufswagen {
-    position: relative;
-    z-index: 30;
-    margin-top: -450px;
-    text-align: right;
-}
-@media screen and (max-width: 600px){
-    .einkaufswagen {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1024px){
-    .einkaufswagen {
-        margin-top: -575px;
-    }
-}
-
-
 .navi {
     position: relative;
     z-index: 20;
     text-align: left;
     font-size: 30px;
     color: red;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between
 }
 @media screen and (max-width: 600px){
     .navi {
         font-size: 30px;
     }
 }
-
 
 a {
     text-decoration: none;
@@ -64,8 +46,7 @@ a {
 .navi a:hover {
     opacity: 0.5;
 }
-
-.einkaufswagen a:hover{
+.navi img:hover{
     opacity: 0.5;
 }
 
@@ -174,3 +155,4 @@ main{
         font-size: 40px;
     }
 }
+
