@@ -45,7 +45,8 @@ body{
     position: relative;
     z-index: 20;
     text-align: left;
-    font-size: 40px;
+    font-size: 30px;
+    color: red;
 }
 @media screen and (max-width: 600px){
     .navi {
@@ -150,7 +151,7 @@ footer{
 
 @media screen and (max-width: 600px){
     #kopf h1 {
-        font-size: 90px;
+        font-size: 40px;
     }
 }
 @media screen and (max-width:600px){
