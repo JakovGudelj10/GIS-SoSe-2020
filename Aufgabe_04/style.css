@@ -25,10 +25,8 @@ body{
 .einkaufswagen {
     position: relative;
     z-index: 30;
-    padding-bottom: 450px;
     margin-top: -450px;
     text-align: right;
-    margin-right: 60px;
 }
 @media screen and (max-width: 600px){
     .einkaufswagen {
@@ -39,7 +37,6 @@ body{
 @media screen and (min-width: 600px) and (max-width: 1024px){
     .einkaufswagen {
         margin-top: -575px;
-        padding-bottom: 600px;
     }
 }
 
@@ -47,10 +44,7 @@ body{
 .navi {
     position: relative;
     z-index: 20;
-    padding-bottom: 450px;
-    margin-top: -600px;
     text-align: left;
-    margin-left: 60px;
     font-size: 40px;
 }
 @media screen and (max-width: 600px){
@@ -109,19 +103,12 @@ main h1{
     }
 }
 
-@media screen and (min-width: 1900px){
-    .artikel{
-        padding-bottom: 7%;
-    }
-}
 
 .artikel {
     width: 300px;
     height: 300px;
     text-align: center;
     margin-top: 4%;
-    padding-top: 2%;
-    padding-bottom: 5%;
     float: left;
 }
 
