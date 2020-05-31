@@ -109,10 +109,10 @@ namespace Aufgabe05 {
 
     const hamburger: Artikel = {_name: "Hamburger", _beschreibung: "Der Klasskiker und Billigste, mit fast keinem Geschmack!", _preis: "1,49€  ", _bild: "newhamburger.png", _bildAlt: "Hamburger", _verfuegbar: true};
     const doublecheeseburger: Artikel = {_name: "Doublecheeseburger", _beschreibung: "Doppelt so teuer wie der normale Cheeseburger!", _preis: "2,99€  ", _bild: "newdoublecheeseburger.png", _bildAlt: "Doublechheseburger", _verfuegbar: false};
-    const bigmac: Artikel = {_name: "BigMac", _beschreibung: "Der absolute Have to eat bei mittelgroßen Hunger!", _preis: "4,29€  ", _bild: "", _bildAlt: "BigMac", _verfuegbar: true};
-    const bigtasty: Artikel = {_name: "Big n'Tasty Bacon", _beschreibung: "Ein Burger mit Speck!", _preis: "5,19€  ", _bild: "", _bildAlt: "BigTastyBacon", _verfuegbar: true};
+    const bigmac: Artikel = {_name: "BigMac", _beschreibung: "Der absolute Have to eat bei mittelgroßen Hunger!", _preis: "4,29€  ", _bild: "newbigmac.png", _bildAlt: "BigMac", _verfuegbar: true};
+    const bigtasty: Artikel = {_name: "Big n'Tasty Bacon", _beschreibung: "Ein Burger mit Speck!", _preis: "5,19€  ", _bild: "newbigy.png", _bildAlt: "BigTastyBacon", _verfuegbar: true};
     const whooper: Artikel = {_name: "Cheeseburgerwhooper", _beschreibung: "Eine weitere Cheeseburgervariation!", _preis: "3,99€  ", _bild: "newwhooper.png", _bildAlt: "Whooper", _verfuegbar: true};
-    const mcchicken: Artikel = {_name: "McChicken", _beschreibung: "Zur Abwechslung stwas Hähnchen!", _preis: "2,99€  ", _bild: "", _bildAlt: "McChicken", _verfuegbar: true};
+    const mcchicken: Artikel = {_name: "McChicken", _beschreibung: "Zur Abwechslung stwas Hähnchen!", _preis: "2,99€  ", _bild: "newchickenburger.png", _bildAlt: "McChicken", _verfuegbar: true};
     const mcrib: Artikel = {_name: "McRib", _beschreibung: "Sieht aufjedenfall speziell aus!", _preis: "3,49€  ", _bild: "newmcrib.png", _bildAlt: "McRib", _verfuegbar: true};
     const cheesespeck: Artikel = {_name: "Cheeseburger mit Speck", _beschreibung: "Mal wieder ein Cheeseburgerupgrade, aber diesmal mit etwas Speck!", _preis: "3,19€  ", _bild: "newspecki.png", _bildAlt: "Speckcheesi", _verfuegbar: true};
     
