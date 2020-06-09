@@ -76,6 +76,7 @@ namespace Aufgabe05 {
         }
     }
     
-    document.getElementById("burger")?.appendChild(kategorie);
+    document.getElementById("burger")?.appendChild(kategorie); 
 
 }
+

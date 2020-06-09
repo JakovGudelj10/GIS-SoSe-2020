@@ -1,19 +1,19 @@
 "use strict";
 var Aufgabe05;
 (function (Aufgabe05) {
-    const hamburger = { _name: "Hamburger", _beschreibung: "Der Klasskiker und Billigste, mit fast keinem Geschmack!", _preis: 1.49, _bild: "newhamburger.png", _bildAlt: "Hamburger", _verfuegbar: true };
-    const doublecheeseburger = { _name: "Doublecheeseburger", _beschreibung: "Doppelt so teuer wie der normale Cheeseburger!", _preis: 2.99, _bild: "newdoublecheeseburger.png", _bildAlt: "Doublechheseburger", _verfuegbar: false };
-    const bigmac = { _name: "BigMac", _beschreibung: "Der absolute Have to eat bei mittelgroßen Hunger!", _preis: 4.29, _bild: "newbigmac.png", _bildAlt: "BigMac", _verfuegbar: true };
-    const bigtasty = { _name: "Big n'Tasty Bacon", _beschreibung: "Ein Burger mit Speck!", _preis: 5.19, _bild: "newbigy.png", _bildAlt: "BigTastyBacon", _verfuegbar: true };
-    const whooper = { _name: "Cheeseburgerwhooper", _beschreibung: "Eine weitere Cheeseburgervariation!", _preis: 3.99, _bild: "newwhooper.png", _bildAlt: "Whooper", _verfuegbar: true };
-    const mcchicken = { _name: "McChicken", _beschreibung: "Zur Abwechslung stwas Hähnchen!", _preis: 2.99, _bild: "newchickenburger.png", _bildAlt: "McChicken", _verfuegbar: true };
-    const mcrib = { _name: "McRib", _beschreibung: "Sieht aufjedenfall speziell aus!", _preis: 3.49, _bild: "newmcrib.png", _bildAlt: "McRib", _verfuegbar: true };
-    const cheesespeck = { _name: "Cheeseburger mit Speck", _beschreibung: "Mal wieder ein Cheeseburgerupgrade, aber diesmal mit etwas Speck!", _preis: 3.19, _bild: "newspecki.png", _bildAlt: "Speckcheesi", _verfuegbar: true };
+    const hamburger = { _name: "Hamburger", _beschreibung: "Der Klasskiker und Billigste, mit fast keinem Geschmack!", _preis: 1.49, _bild: "newhamburger.png", _bildAlt: "Hamburger" };
+    const doublecheeseburger = { _name: "Doublecheeseburger", _beschreibung: "Doppelt so teuer wie der normale Cheeseburger!", _preis: 2.99, _bild: "newdoublecheeseburger.png", _bildAlt: "Doublechheseburger" };
+    const bigmac = { _name: "BigMac", _beschreibung: "Der absolute Have to eat bei mittelgroßen Hunger!", _preis: 4.29, _bild: "newbigmac.png", _bildAlt: "BigMac" };
+    const bigtasty = { _name: "Big n'Tasty Bacon", _beschreibung: "Ein Burger mit Speck!", _preis: 5.19, _bild: "newbigy.png", _bildAlt: "BigTastyBacon" };
+    const whooper = { _name: "Cheeseburgerwhooper", _beschreibung: "Eine weitere Cheeseburgervariation!", _preis: 3.99, _bild: "newwhooper.png", _bildAlt: "Whooper" };
+    const mcchicken = { _name: "McChicken", _beschreibung: "Zur Abwechslung stwas Hähnchen!", _preis: 2.99, _bild: "newchickenburger.png", _bildAlt: "McChicken" };
+    const mcrib = { _name: "McRib", _beschreibung: "Sieht aufjedenfall speziell aus!", _preis: 3.49, _bild: "newmcrib.png", _bildAlt: "McRib" };
+    const cheesespeck = { _name: "Cheeseburger mit Speck", _beschreibung: "Mal wieder ein Cheeseburgerupgrade, aber diesmal mit etwas Speck!", _preis: 3.19, _bild: "newspecki.png", _bildAlt: "Speckcheesi", };
     Aufgabe05.burger = [hamburger, doublecheeseburger, bigmac, bigtasty, whooper, mcchicken, mcrib, cheesespeck];
-    const pommes = { _name: "Pommes", _beschreibung: "Jeder liebt doch Pommes, nicht?", _preis: 2.89, _bild: "newpommes.png", _bildAlt: "Pommes", _verfuegbar: true };
-    const chickenMcNuggets = { _name: "ChickenMcNuggets", _beschreibung: "Seien wir ehrlich, das Herzstück der Filiale!", _preis: 4.99, _bild: "ewchicks.png", _bildAlt: "ChickenMcNuggets", _verfuegbar: true };
-    const mcSundae = { _name: "McSundae", _beschreibung: "Nach Wahl: Schoko, Erdbeer oder Karamell!", _preis: 1.00, _bild: "newmcsun.png", _bildAlt: "McSundae", _verfuegbar: true };
-    const mcflurry = { _name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true };
+    const pommes = { _name: "Pommes", _beschreibung: "Jeder liebt doch Pommes, nicht?", _preis: 2.89, _bild: "newpommes.png", _bildAlt: "Pommes" };
+    const chickenMcNuggets = { _name: "ChickenMcNuggets", _beschreibung: "Seien wir ehrlich, das Herzstück der Filiale!", _preis: 4.99, _bild: "ewchicks.png", _bildAlt: "ChickenMcNuggets" };
+    const mcSundae = { _name: "McSundae", _beschreibung: "Nach Wahl: Schoko, Erdbeer oder Karamell!", _preis: 1.00, _bild: "newmcsun.png", _bildAlt: "McSundae" };
+    const mcflurry = { _name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry" };
     Aufgabe05.sonstiges = [pommes, chickenMcNuggets, mcSundae, mcflurry];
     let kategorie = document.createElement("div");
     kategorie.setAttribute("class", "burger");
@@ -36,18 +36,9 @@ var Aufgabe05;
         preis.setAttribute("class", "preis");
         preis.innerHTML = Aufgabe05.burger[i]._preis;
         divArtikel.appendChild(preis);
-        let knopf = document.createElement("button");
-        knopf.setAttribute("type", "button");
-        preis.appendChild(knopf);
-        if (Aufgabe05.burger[i]._verfuegbar == true) {
-            knopf.innerText = "Kaufen";
-            knopf.setAttribute("id", "verfügbar");
-        }
-        else {
-            knopf.innerText = "Ausverkauft";
-            knopf.setAttribute("id", "nichtVerfügbar");
-        }
     }
     document.getElementById("burger")?.appendChild(kategorie);
+    let _newButton = document.createElement("button");
+    _newButton.innerHTML = "Jetzt kaufen";
 })(Aufgabe05 || (Aufgabe05 = {}));
 //# sourceMappingURL=script.js.map
