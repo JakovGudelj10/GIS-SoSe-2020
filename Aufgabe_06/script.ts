@@ -63,13 +63,13 @@ namespace Aufgabe05 {
     document.getElementById("burger")?.appendChild(kategorie);
 
 }
+//Teilaufgabe1
 let kaufen: HTMLButtonElement = document.createElement("button");
 kaufen.innerText = "Kaufen";
 kaufen.addEventListener("click", hinzufuegen);
 kaufen.setAttribute("type", "button");
 kaufen.setAttribute("artikelPreis", burger.preis.toString());
 
-//Zähler
 let einkaufswagenZahl: number = 0;
 let zahl: HTMLElement = document.createElement("string");
 
@@ -78,53 +78,45 @@ function hinzufuegen(): void {
     zahl.innerHTML = einkaufswagenZahl.toString();
     document.getElementById("einkaufswagen")?.appendChild(zahl);
 }
-// Kategorien unterscheidung / ausblenden
+//Teilaufgabe2
 
 let navDiv: HTMLElement = document.createElement("div");
-let kategorien: string[] = ["Burger", "Sonstiges", "alles anzeigen"];
+let artikel: string[] = ["Burger", "Sonstiges", "Beides"];
 
 for (let index: number = 0; index < kategorien.length; index++) {
     let nav: HTMLElement;
     nav = document.createElement("p");
-    nav.setAttribute("unterscheidung", kategorien[index]);
-    nav.innerText = kategorien[index];
-    nav.addEventListener("click", navAusblenden);
+    nav.setAttribute("gegen", artikel[index]);
+    nav.innerText = artikel[index];
+    nav.addEventListener("click", navWeg);
     navDiv.appendChild(nav);
 }
 document.getElementById("nav")?.appendChild(navDiv);
 
-
-function navAusblenden(_event: Event): void {
+function navWeg(_event: Event): void {
     let nav1: HTMLElement;
     nav1 = (<HTMLElement>_event.target);
-    let unterscheidung: string = nav1.getAttribute("unterscheidung")!;
+    let gegen: string = nav1.getAttribute("gegen")!;
 
-    if (unterscheidung == "Coronaartikel") {
-        document.getElementById("schuhe")?.setAttribute("style", "display: none");
-        document.getElementById("corona")?.setAttribute("style", "display: flex");
-        document.getElementById("Anker2")?.setAttribute("style", "display: none");
-        document.getElementById("Anker1")?.setAttribute("style", "display: block");
+    if (gegen == "Burger") {
+        document.getElementById("sonstiges")?.setAttribute("style", "display: none");
+        document.getElementById("burger")?.setAttribute("style", "display: flex");
+        document.getElementById("anker2")?.setAttribute("style", "display: none");
+        document.getElementById("anker1")?.setAttribute("style", "display: block");
     }
 
-    if (unterscheidung == "Schuhe") {
-        document.getElementById("corona")?.setAttribute("style", "display: none");
-        document.getElementById("schuhe")?.setAttribute("style", "display: flex");
-        document.getElementById("Anker1")?.setAttribute("style", "display: none");
-        document.getElementById("Anker2")?.setAttribute("style", "display: block");
+    if (gegen == "Sonstiges") {
+        document.getElementById("burger")?.setAttribute("style", "display: none");
+        document.getElementById("sonstiges")?.setAttribute("style", "display: flex");
+        document.getElementById("anker1")?.setAttribute("style", "display: none");
+        document.getElementById("anker2")?.setAttribute("style", "display: block");
     }
-    if (unterscheidung == "alles anzeigen") {
-        document.getElementById("corona")?.setAttribute("style", "display: flex");
-        document.getElementById("schuhe")?.setAttribute("style", "display: flex");
-        document.getElementById("Anker1")?.setAttribute("style", "display: block");
-        document.getElementById("Anker2")?.setAttribute("style", "display: block");
-
-
+    if (gegen == "Beides") {
+        document.getElementById("burger")?.setAttribute("style", "display: flex");
+        document.getElementById("sonstiges")?.setAttribute("style", "display: flex");
+        document.getElementById("anker1")?.setAttribute("style", "display: block");
+        document.getElementById("anker2")?.setAttribute("style", "display: block");
 
     }
-
-
-
-
-
 
 }
