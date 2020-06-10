@@ -27,14 +27,11 @@ namespace Aufgabe05 {
     const mcflurry: Artikel = {_name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true};
    
     export let sonstiges: Artikel[] = [pommes, chickenMcNuggets, mcSundae, mcflurry];
-    
-
 
     let kategorie: HTMLElement = document.createElement("div");
     kategorie.setAttribute("class", "burger");
+    kategorie.setAttribute("class", "sonstiges");
     document.getElementsByTagName("main")[0].appendChild(kategorie);
-
-
 
     for (let i: number = 0; i < burger.length; i++) {
 
@@ -108,8 +105,6 @@ namespace Aufgabe05 {
 
 }
 //Teilaufgabe1
-
-
 let einkaufswagenZahl: number = 0;
 let preis: number = 0;
 let zahl: HTMLElement = document.createElement("string");
@@ -122,7 +117,6 @@ function hinzufuegen(_event: Event): void {
     console.log(preis);
 }
 //Teilaufgabe2
-
 let navDiv: HTMLElement = document.createElement("div");
 let artikel: string[] = ["Burger", "Sonstiges", "Beides"];
 
@@ -159,7 +153,5 @@ function navWeg(_event: Event): void {
         document.getElementById("sonstiges")?.setAttribute("style", "display: flex");
         document.getElementById("anker1")?.setAttribute("style", "display: block");
         document.getElementById("anker2")?.setAttribute("style", "display: block");
-
     }
-
 }

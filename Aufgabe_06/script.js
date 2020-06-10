@@ -17,6 +17,7 @@ var Aufgabe05;
     Aufgabe05.sonstiges = [pommes, chickenMcNuggets, mcSundae, mcflurry];
     let kategorie = document.createElement("div");
     kategorie.setAttribute("class", "burger");
+    kategorie.setAttribute("class", "sonstiges");
     document.getElementsByTagName("main")[0].appendChild(kategorie);
     for (let i = 0; i < Aufgabe05.burger.length; i++) {
         let divArtikel = document.createElement("div");
