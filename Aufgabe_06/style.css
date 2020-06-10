@@ -155,3 +155,10 @@ main{
         font-size: 40px;
     }
 }
+#einkaufswagen string{
+    background-color: purple;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}

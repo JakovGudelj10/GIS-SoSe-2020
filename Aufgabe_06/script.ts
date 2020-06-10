@@ -32,6 +32,8 @@ namespace Aufgabe05 {
 
     let kategorie: HTMLElement = document.createElement("div");
     kategorie.setAttribute("class", "burger");
+    document.getElementsByTagName("main")[0].appendChild(kategorie);
+
 
 
     for (let i: number = 0; i < burger.length; i++) {
@@ -56,34 +58,75 @@ namespace Aufgabe05 {
 
         let preis: HTMLElement = document.createElement("p");
         preis.setAttribute("class", "preis");
-        preis.innerHTML = burger[i]._preis;
-        divArtikel.appendChild(preis);   
+        preis.innerHTML = burger[i]._preis.toString();
+        divArtikel.appendChild(preis);  
+        
+        let kaufen: HTMLButtonElement = document.createElement("button");
+        kaufen.innerText = "Kaufen";
+        kaufen.addEventListener("click", hinzufuegen);
+        kaufen.setAttribute("type", "button");
+        kaufen.setAttribute("artikelPreis", burger[i]._preis.toString());
+        divArtikel.appendChild(kaufen);
 
     }
     document.getElementById("burger")?.appendChild(kategorie);
 
+    for (let i: number = 0; i < sonstiges.length; i++) {
+
+        let divArtikel: HTMLElement = document.createElement("div");
+        divArtikel.setAttribute("class", "artikel");
+        kategorie.appendChild(divArtikel);
+
+        let bild: HTMLElement = document.createElement("img");
+        bild.setAttribute("class", "bild");
+        bild.setAttribute("src", sonstiges[i]._bild);
+        bild.setAttribute("alt", sonstiges[i]._bildAlt);
+        divArtikel.appendChild(bild);
+
+        let name: HTMLElement = document.createElement("h2");
+        name.innerHTML = sonstiges[i]._name;
+        divArtikel.appendChild(name);
+
+        let beschreibung: HTMLElement = document.createElement("p");
+        beschreibung.innerHTML = sonstiges[i]._beschreibung;
+        divArtikel.appendChild(beschreibung);
+
+        let preis: HTMLElement = document.createElement("p");
+        preis.setAttribute("class", "preis");
+        preis.innerHTML = sonstiges[i]._preis.toString();
+        divArtikel.appendChild(preis);  
+        
+        let kaufen: HTMLButtonElement = document.createElement("button");
+        kaufen.innerText = "Kaufen";
+        kaufen.addEventListener("click", hinzufuegen);
+        kaufen.setAttribute("type", "button");
+        kaufen.setAttribute("artikelPreis", sonstiges[i]._preis.toString());
+        divArtikel.appendChild(kaufen);
+
+    }
+    document.getElementById("sonstiges")?.appendChild(kategorie);
+
 }
 //Teilaufgabe1
-let kaufen: HTMLButtonElement = document.createElement("button");
-kaufen.innerText = "Kaufen";
-kaufen.addEventListener("click", hinzufuegen);
-kaufen.setAttribute("type", "button");
-kaufen.setAttribute("artikelPreis", burger.preis.toString());
+
 
 let einkaufswagenZahl: number = 0;
+let preis: number = 0;
 let zahl: HTMLElement = document.createElement("string");
 
-function hinzufuegen(): void {
+function hinzufuegen(_event: Event): void {
     einkaufswagenZahl++;
     zahl.innerHTML = einkaufswagenZahl.toString();
     document.getElementById("einkaufswagen")?.appendChild(zahl);
+    preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("artikelPreis")!);
+    console.log(preis);
 }
 //Teilaufgabe2
 
 let navDiv: HTMLElement = document.createElement("div");
 let artikel: string[] = ["Burger", "Sonstiges", "Beides"];
 
-for (let index: number = 0; index < kategorien.length; index++) {
+for (let index: number = 0; index < artikel.length; index++) {
     let nav: HTMLElement;
     nav = document.createElement("p");
     nav.setAttribute("gegen", artikel[index]);
