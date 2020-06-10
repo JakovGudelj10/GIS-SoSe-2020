@@ -118,7 +118,7 @@ function hinzufuegen(_event: Event): void {
 }
 //Teilaufgabe2
 let navDiv: HTMLElement = document.createElement("div");
-let artikel: string[] = ["Burger", "Sonstiges", "Beides"];
+let artikel: string[] = ["burger", "sonstiges", "Beides"];
 
 for (let index: number = 0; index < artikel.length; index++) {
     let nav: HTMLElement;
@@ -135,14 +135,14 @@ function navWeg(_event: Event): void {
     nav1 = (<HTMLElement>_event.target);
     let gegen: string = nav1.getAttribute("gegen")!;
 
-    if (gegen == "Burger") {
+    if (gegen == "burger") {
         document.getElementById("sonstiges")?.setAttribute("style", "display: none");
         document.getElementById("burger")?.setAttribute("style", "display: flex");
         document.getElementById("anker2")?.setAttribute("style", "display: none");
         document.getElementById("anker1")?.setAttribute("style", "display: block");
     }
 
-    if (gegen == "Sonstiges") {
+    if (gegen == "sonstiges") {
         document.getElementById("burger")?.setAttribute("style", "display: none");
         document.getElementById("sonstiges")?.setAttribute("style", "display: flex");
         document.getElementById("anker1")?.setAttribute("style", "display: none");

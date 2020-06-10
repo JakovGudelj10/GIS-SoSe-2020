@@ -87,7 +87,7 @@ function hinzufuegen(_event) {
 }
 //Teilaufgabe2
 let navDiv = document.createElement("div");
-let artikel = ["Burger", "Sonstiges", "Beides"];
+let artikel = ["burger", "sonstiges", "Beides"];
 for (let index = 0; index < artikel.length; index++) {
     let nav;
     nav = document.createElement("p");
@@ -101,13 +101,13 @@ function navWeg(_event) {
     let nav1;
     nav1 = _event.target;
     let gegen = nav1.getAttribute("gegen");
-    if (gegen == "Burger") {
+    if (gegen == "burger") {
         document.getElementById("sonstiges")?.setAttribute("style", "display: none");
         document.getElementById("burger")?.setAttribute("style", "display: flex");
         document.getElementById("anker2")?.setAttribute("style", "display: none");
         document.getElementById("anker1")?.setAttribute("style", "display: block");
     }
-    if (gegen == "Sonstiges") {
+    if (gegen == "sonstiges") {
         document.getElementById("burger")?.setAttribute("style", "display: none");
         document.getElementById("sonstiges")?.setAttribute("style", "display: flex");
         document.getElementById("anker1")?.setAttribute("style", "display: none");
