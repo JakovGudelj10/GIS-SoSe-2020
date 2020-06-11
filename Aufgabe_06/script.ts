@@ -10,7 +10,7 @@ namespace Aufgabe05 {
     }
 
     const hamburger: Artikel = {_name: "Hamburger", _beschreibung: "Der Klasskiker und Billigste, mit fast keinem Geschmack!", _preis: 1.49 , _bild: "newhamburger.png", _bildAlt: "Hamburger", _verfuegbar: true};
-    const doublecheeseburger: Artikel = {_name: "Doublecheeseburger", _beschreibung: "Doppelt so teuer wie der normale Cheeseburger!", _preis: 2.99  , _bild: "newdoublecheeseburger.png", _bildAlt: "Doublechheseburger", _verfuegbar: false};
+    const doublecheeseburger: Artikel = {_name: "Doublecheeseburger", _beschreibung: "Doppelt so teuer wie der normale Cheeseburger!", _preis: 2.99  , _bild: "newdouble.png", _bildAlt: "Doublecheeseburger", _verfuegbar: false};
     const bigmac: Artikel = {_name: "BigMac", _beschreibung: "Der absolute Have to eat bei mittelgroßen Hunger!", _preis: 4.29  , _bild: "newbigmac.png", _bildAlt: "BigMac", _verfuegbar: true};
     const bigtasty: Artikel = {_name: "Big n'Tasty Bacon", _beschreibung: "Ein Burger mit Speck!", _preis: 5.19  , _bild: "newbigy.png", _bildAlt: "BigTastyBacon", _verfuegbar: true};
     const whooper: Artikel = {_name: "Cheeseburgerwhooper", _beschreibung: "Eine weitere Cheeseburgervariation!", _preis: 3.99  , _bild: "newwhooper.png", _bildAlt: "Whooper", _verfuegbar: true};
@@ -22,7 +22,7 @@ namespace Aufgabe05 {
     export let burger: Artikel[] = [hamburger, doublecheeseburger, bigmac, bigtasty, whooper, mcchicken, mcrib, cheesespeck];
 
     const pommes: Artikel = {_name: "Pommes", _beschreibung: "Jeder liebt doch Pommes, nicht?", _preis: 2.89, _bild: "newpommes.png", _bildAlt: "Pommes", _verfuegbar: true};
-    const chickenMcNuggets: Artikel = {_name: "ChickenMcNuggets", _beschreibung: "Seien wir ehrlich, das Herzstück der Filiale!", _preis: 4.99, _bild: "ewchicks.png", _bildAlt: "ChickenMcNuggets", _verfuegbar: true};
+    const chickenMcNuggets: Artikel = {_name: "ChickenMcNuggets", _beschreibung: "Seien wir ehrlich, das Herzstück der Filiale!", _preis: 4.99, _bild: "newchicks.png", _bildAlt: "ChickenMcNuggets", _verfuegbar: true};
     const mcSundae: Artikel = {_name: "McSundae", _beschreibung: "Nach Wahl: Schoko, Erdbeer oder Karamell!", _preis: 1.00, _bild: "newmcsun.png", _bildAlt: "McSundae", _verfuegbar: true};
     const mcflurry: Artikel = {_name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true};
    
