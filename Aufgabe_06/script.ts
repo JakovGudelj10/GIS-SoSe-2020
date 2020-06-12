@@ -1,4 +1,4 @@
-namespace Aufgabe05 {
+namespace Aufgabe06 {
 
     export interface Artikel {
         _name: string;
