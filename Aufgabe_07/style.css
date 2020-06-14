@@ -163,3 +163,16 @@ main{
     color: white;
     text-align: center;
 }
+
+button {
+    background-color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.warenkorb{
+    text-align: center;
+
+}

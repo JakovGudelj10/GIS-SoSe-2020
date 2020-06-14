@@ -15,45 +15,44 @@ var Aufgabe07;
         { _name: "McSundae", _beschreibung: "Nach Wahl: Schoko, Erdbeer oder Karamell!", _preis: 1.00, _bild: "newmcsun.png", _bildAlt: "McSundae", _verfuegbar: true, _kategorie: 1 },
         { _name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true, _kategorie: 1 }
     ];
-    ladeArtikel("artikel.json");
-    async function ladeArtikel(_url) {
+    async function communicate(_url) {
         let response = await fetch(_url);
-        let jsonArray = await response.json();
-        Aufgabe07.artikel = await JSON.parse(JSON.stringify(jsonArray));
-        ladeArtikel();
+        let respJSON = await response.json();
+        artikel = JSON.parse(JSON.stringify(respJSON));
     }
-    let kategorie0 = document.getElementById("burger");
-    let kategorie1 = document.getElementById("Sonstiges");
-    for (let i = 0; i < Aufgabe07.burger.length; i++) {
-        let divArtikel = document.createElement("div");
-        divArtikel.setAttribute("class", "artikel");
-        if (Aufgabe07.burger[i]._kategorie == 0)
-            kategorie0.appendChild(divArtikel);
-        if (Aufgabe07.burger[i]._kategorie == 1)
-            kategorie1.appendChild(divArtikel);
-        let bild = document.createElement("img");
-        bild.setAttribute("class", "bild");
-        bild.setAttribute("src", Aufgabe07.burger[i]._bild);
-        bild.setAttribute("alt", Aufgabe07.burger[i]._bildAlt);
-        divArtikel.appendChild(bild);
-        let name = document.createElement("h2");
-        name.innerHTML = Aufgabe07.burger[i]._name;
-        divArtikel.appendChild(name);
-        let beschreibung = document.createElement("p");
-        beschreibung.innerHTML = Aufgabe07.burger[i]._beschreibung;
-        divArtikel.appendChild(beschreibung);
-        let preis = document.createElement("p");
-        preis.setAttribute("class", "preis");
-        preis.innerHTML = Aufgabe07.burger[i]._preis.toString();
-        divArtikel.appendChild(preis);
-        let kaufen = document.createElement("button");
-        kaufen.innerText = "Kaufen";
-        kaufen.addEventListener("click", hinzufuegen);
-        kaufen.setAttribute("type", "button");
-        kaufen.setAttribute("artikelPreis", Aufgabe07.burger[i]._preis.toString());
-        divArtikel.appendChild(kaufen);
-    }
+    Aufgabe07.communicate = communicate;
 })(Aufgabe07 || (Aufgabe07 = {}));
+let kategorie0 = document.getElementById("burger");
+let kategorie1 = document.getElementById("Sonstiges");
+for (let i = 0; i < burger.length; i++) {
+    let divArtikel = document.createElement("div");
+    divArtikel.setAttribute("class", "artikel");
+    if (burger[i]._kategorie == 0)
+        kategorie0.appendChild(divArtikel);
+    if (burger[i]._kategorie == 1)
+        kategorie1.appendChild(divArtikel);
+    let bild = document.createElement("img");
+    bild.setAttribute("class", "bild");
+    bild.setAttribute("src", burger[i]._bild);
+    bild.setAttribute("alt", burger[i]._bildAlt);
+    divArtikel.appendChild(bild);
+    let name = document.createElement("h2");
+    name.innerHTML = burger[i]._name;
+    divArtikel.appendChild(name);
+    let beschreibung = document.createElement("p");
+    beschreibung.innerHTML = burger[i]._beschreibung;
+    divArtikel.appendChild(beschreibung);
+    let preis = document.createElement("p");
+    preis.setAttribute("class", "preis");
+    preis.innerHTML = burger[i]._preis.toString();
+    divArtikel.appendChild(preis);
+    let kaufen = document.createElement("button");
+    kaufen.innerText = "Kaufen";
+    kaufen.addEventListener("click", hinzufuegen);
+    kaufen.setAttribute("type", "button");
+    kaufen.setAttribute("artikelPreis", burger[i]._preis.toString());
+    divArtikel.appendChild(kaufen);
+}
 let einkaufswagenZahl = 0;
 let preis = 0;
 let zahl = document.createElement("string");
