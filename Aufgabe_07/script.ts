@@ -25,9 +25,21 @@ namespace Aufgabe07 {
     {_name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true, _kategorie: 1}
    ];
 
+    export let artikel: Artikel[];
+    loadProducts("artikel.json");
+
+    async function loadProducts(_url: RequestInfo): Promise<void> {
+       let response: Response = await fetch(_url);
+       let jsonArray: JSON = await response.json();
+       artikel = await JSON.parse(JSON.stringify(jsonArray));
+       loadProducts();
+   }
+
     let kategorie0: HTMLElement = document.getElementById("burger") as HTMLElement;
     let kategorie1: HTMLElement = document.getElementById("Sonstiges") as HTMLElement;
- 
+
+   
+
     for (let i: number = 0; i < burger.length; i++) {
 
         let divArtikel: HTMLElement = document.createElement("div");
@@ -64,7 +76,6 @@ namespace Aufgabe07 {
         divArtikel.appendChild(kaufen);
 
     }
-    
 
 }
 //Teilaufgabe1
@@ -118,3 +129,4 @@ function navWeg(_event: Event): void {
         document.getElementById("anker2")?.setAttribute("style", "display: block");
     }
 }
+
