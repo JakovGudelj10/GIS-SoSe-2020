@@ -15,6 +15,13 @@ var Aufgabe07;
         { _name: "McSundae", _beschreibung: "Nach Wahl: Schoko, Erdbeer oder Karamell!", _preis: 1.00, _bild: "newmcsun.png", _bildAlt: "McSundae", _verfuegbar: true, _kategorie: 1 },
         { _name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true, _kategorie: 1 }
     ];
+    loadProducts("artikel.json");
+    async function loadProducts(_url) {
+        let response = await fetch(_url);
+        let jsonArray = await response.json();
+        Aufgabe07.artikel = await JSON.parse(JSON.stringify(jsonArray));
+        loadProducts();
+    }
     let kategorie0 = document.getElementById("burger");
     let kategorie1 = document.getElementById("Sonstiges");
     for (let i = 0; i < Aufgabe07.burger.length; i++) {
