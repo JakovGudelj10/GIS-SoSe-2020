@@ -15,12 +15,12 @@ var Aufgabe07;
         { _name: "McSundae", _beschreibung: "Nach Wahl: Schoko, Erdbeer oder Karamell!", _preis: 1.00, _bild: "newmcsun.png", _bildAlt: "McSundae", _verfuegbar: true, _kategorie: 1 },
         { _name: "McFlurry", _beschreibung: "Wir hoffen die Eismaschine ist nicht kaputt!", _preis: 2.89, _bild: "newmcflurry.png", _bildAlt: "McFlurry", _verfuegbar: true, _kategorie: 1 }
     ];
-    loadProducts("artikel.json");
-    async function loadProducts(_url) {
+    ladeArtikel("artikel.json");
+    async function ladeArtikel(_url) {
         let response = await fetch(_url);
         let jsonArray = await response.json();
         Aufgabe07.artikel = await JSON.parse(JSON.stringify(jsonArray));
-        loadProducts();
+        ladeArtikel();
     }
     let kategorie0 = document.getElementById("burger");
     let kategorie1 = document.getElementById("Sonstiges");
@@ -54,7 +54,6 @@ var Aufgabe07;
         divArtikel.appendChild(kaufen);
     }
 })(Aufgabe07 || (Aufgabe07 = {}));
-//Teilaufgabe1
 let einkaufswagenZahl = 0;
 let preis = 0;
 let zahl = document.createElement("string");
@@ -65,9 +64,8 @@ function hinzufuegen(_event) {
     preis += parseFloat(_event.target?.getAttribute("artikelPreis"));
     console.log(preis);
 }
-//Teilaufgabe2
 let navDiv = document.createElement("div");
-let artikel = ["burger", "sonstiges", "Beides"];
+let art = ["burger", "sonstiges", "Beides"];
 for (let index = 0; index < artikel.length; index++) {
     let nav;
     nav = document.createElement("p");

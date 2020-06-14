@@ -56,7 +56,7 @@ namespace Aufgabe05 {
 
         let preis: HTMLElement = document.createElement("p");
         preis.setAttribute("class", "preis");
-        preis.innerHTML = burger[i]._preis;
+        
         divArtikel.appendChild(preis);
         
         let knopf: HTMLElement = document.createElement("button");

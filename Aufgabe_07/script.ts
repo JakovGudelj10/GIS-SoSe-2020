@@ -26,13 +26,13 @@ namespace Aufgabe07 {
    ];
 
     export let artikel: Artikel[];
-    loadProducts("artikel.json");
+    ladeArtikel("artikel.json");
 
-    async function loadProducts(_url: RequestInfo): Promise<void> {
+    async function ladeArtikel(_url: RequestInfo): Promise<void> {
        let response: Response = await fetch(_url);
        let jsonArray: JSON = await response.json();
        artikel = await JSON.parse(JSON.stringify(jsonArray));
-       loadProducts();
+       ladeArtikel();
    }
 
     let kategorie0: HTMLElement = document.getElementById("burger") as HTMLElement;
@@ -78,7 +78,6 @@ namespace Aufgabe07 {
     }
 
 }
-//Teilaufgabe1
 let einkaufswagenZahl: number = 0;
 let preis: number = 0;
 let zahl: HTMLElement = document.createElement("string");
@@ -90,9 +89,8 @@ function hinzufuegen(_event: Event): void {
     preis += parseFloat((<HTMLButtonElement>_event.target)?.getAttribute("artikelPreis")!);
     console.log(preis);
 }
-//Teilaufgabe2
 let navDiv: HTMLElement = document.createElement("div");
-let artikel: string[] = ["burger", "sonstiges", "Beides"];
+let art: string[] = ["burger", "sonstiges", "Beides"];
 
 for (let index: number = 0; index < artikel.length; index++) {
     let nav: HTMLElement;

@@ -34,7 +34,6 @@ var Aufgabe05;
         divArtikel.appendChild(beschreibung);
         let preis = document.createElement("p");
         preis.setAttribute("class", "preis");
-        preis.innerHTML = Aufgabe05.burger[i]._preis;
         divArtikel.appendChild(preis);
         let knopf = document.createElement("button");
         knopf.setAttribute("type", "button");
