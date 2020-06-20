@@ -1,0 +1,110 @@
+[
+    {
+        "_name": "Hamburger",
+        "_beschreibung": "Der Klasskiker und Billigste, mit fast keinem Geschmack!",
+        "_preis": 1.49,
+        "_bild": "newhamburger.png",
+        "_bildAlt": "Hamburger",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "Doublecheeseburger",
+        "_beschreibung": "Doppelt so teuer wie der normale Cheeseburger!",
+        "_preis": 2.99,
+        "_bild": "newdouble.png",
+        "_bildAlt": "Doublecheeseburger",
+        "_verfuegbar": false,
+        "_kategorie": 0
+    },
+    {
+        "_name": "BigMac",
+        "_beschreibung": "Der absolute Have to eat bei mittelgroßen Hunger!",
+        "_preis": 4.29,
+        "_bild": "newbigmac.png",
+        "_bildAlt": "BigMac",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "Big n'Tasty Bacon",
+        "_beschreibung": "Ein Burger mit Speck!",
+        "_preis": 5.19,
+        "_bild": "newbigy.png",
+        "_bildAlt": "BigTastyBacon",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "Cheeseburgerwhooper",
+        "_beschreibung": "Eine weitere Cheeseburgervariation!",
+        "_preis": 3.99,
+        "_bild": "newwhooper.png",
+        "_bildAlt": "Whooper",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "McChicken",
+        "_beschreibung": "Zur Abwechslung stwas Hähnchen!",
+        "_preis": 2.99,
+        "_bild": "newchickenburger.png",
+        "_bildAlt": "McChicken",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "McRib",
+        "_beschreibung": "Sieht aufjedenfall speziell aus!",
+        "_preis": 3.49,
+        "_bild": "newmcrib.png",
+        "_bildAlt": "McRib",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "Cheeseburger mit Speck",
+        "_beschreibung": "Mal wieder ein Cheeseburgerupgrade, aber diesmal mit etwas Speck!",
+        "_preis": 3.19,
+        "_bild": "newspecki.png",
+        "_bildAlt": "Speckcheesi",
+        "_verfuegbar": true,
+        "_kategorie": 0
+    },
+    {
+        "_name": "Pommes",
+        "_beschreibung": "Jeder liebt doch Pommes, nicht?",
+        "_preis": 2.89,
+        "_bild": "newpommes.png",
+        "_bildAlt": "Pommes",
+        "_verfuegbar": true,
+        "_kategorie": 1
+    },
+    {
+        "_name": "ChickenMcNuggets",
+        "_beschreibung": "Seien wir ehrlich, das Herzstück der Filiale!",
+        "_preis": 4.99,
+        "_bild": "newchicks.png",
+        "_bildAlt": "ChickenMcNuggets",
+        "_verfuegbar": true,
+        "_kategorie": 1
+    },
+    {
+        "_name": "McSundae",
+        "_beschreibung": "Nach Wahl: Schoko, Erdbeer oder Karamell!",
+        "_preis": 1.00,
+        "_bild": "newmcsun.png",
+        "_bildAlt": "McSundae",
+        "_verfuegbar": true,
+        "_kategorie": 1
+    },
+    {
+        "_name": "McFlurry",
+        "_beschreibung": "Wir hoffen die Eismaschine ist nicht kaputt!",
+        "_preis": 2.89,
+        "_bild": "newmcflurry.png",
+        "_bildAlt": "McFlurry",
+        "_verfuegbar": true,
+        "_kategorie": 1
+    }
+]

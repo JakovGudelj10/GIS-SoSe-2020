@@ -60,12 +60,12 @@ function hinzufuegen(_event) {
 }
 //Teilaufgabe2
 let navDiv = document.createElement("div");
-let artikel = ["burger", "sonstiges", "Beides"];
-for (let index = 0; index < artikel.length; index++) {
+let art = ["burger", "sonstiges", "Beides"];
+for (let index = 0; index < art.length; index++) {
     let nav;
     nav = document.createElement("p");
-    nav.setAttribute("gegen", artikel[index]);
-    nav.innerText = artikel[index];
+    nav.setAttribute("gegen", art[index]);
+    nav.innerText = art[index];
     nav.addEventListener("click", navWeg);
     navDiv.appendChild(nav);
 }

@@ -1,13 +1,13 @@
-namespace artikel {
+namespace Aufgabe07 {
 
-    for (let i: number = 0; i < burger.length; i++) {
+    let kategorie: HTMLElement = document.querySelector(".warenkorb") as HTMLElement;
+    
+    function addItem(i: number, burger: Artikel[]): void {
 
         let divArtikel: HTMLElement = document.createElement("div");
         divArtikel.setAttribute("class", "artikel");
         if (burger[i]._kategorie == 0)
-        kategorie0.appendChild(divArtikel);
-        if (burger[i]._kategorie == 1)
-        kategorie1.appendChild(divArtikel);
+        kategorie.appendChild(divArtikel);
 
         let bild: HTMLElement = document.createElement("img");
         bild.setAttribute("class", "bild");
@@ -33,50 +33,33 @@ namespace artikel {
         kaufen.addEventListener("click", hinzufuegen);
         kaufen.setAttribute("type", "button");
         kaufen.setAttribute("artikelPreis", burger[i]._preis.toString());
+        kaufen.setAttribute("index", i + "");
+        kaufen.setAttribute("zähler", 0 + "");
         divArtikel.appendChild(kaufen);
+   
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function preisAufbau(): void {
+        for (let i: number = 0; i < localStorage.length; ++i) {
+            if (localStorage.key(i) != "summe") {
+            let storageKey: string = localStorage.key(i) as string;
+            let j: number = parseInt(storageKey);
+            addItem(j, burger);
+            }
+        }
+        let gesamt: HTMLElement = document.querySelector("#summe") as HTMLElement;
+        if (localStorage.getItem("summe") != null)
+        gesamt.innerHTML = "Gesamtpreis: " + localStorage.getItem("summe") + "€";
+        else 
+        gesamt.innerHTML = "Gesamtpreis: 0€";
+    }
+    async function initWarenkorb(): Promise<void> {
+        await communicate("burger.json");
+        preisAufbau();
+    }
+    initWarenkorb();
+    async function communicate(_url: RequestInfo): Promise<void> {
+        let response: Response = await fetch(_url);
+        let respJSON: String = await response.json();
+        burger = JSON.parse(JSON.stringify(respJSON));
+    }
 }

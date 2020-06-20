@@ -81,13 +81,13 @@ function hinzufuegen(_event: Event): void {
 }
 //Teilaufgabe2
 let navDiv: HTMLElement = document.createElement("div");
-let artikel: string[] = ["burger", "sonstiges", "Beides"];
+let art: string[] = ["burger", "sonstiges", "Beides"];
 
-for (let index: number = 0; index < artikel.length; index++) {
+for (let index: number = 0; index < art.length; index++) {
     let nav: HTMLElement;
     nav = document.createElement("p");
-    nav.setAttribute("gegen", artikel[index]);
-    nav.innerText = artikel[index];
+    nav.setAttribute("gegen", art[index]);
+    nav.innerText = art[index];
     nav.addEventListener("click", navWeg);
     navDiv.appendChild(nav);
 }
