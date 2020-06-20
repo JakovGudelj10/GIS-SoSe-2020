@@ -6,7 +6,6 @@ namespace Aufgabe07 {
 
         let divArtikel: HTMLElement = document.createElement("div");
         divArtikel.setAttribute("class", "artikel");
-        if (burger[i]._kategorie == 0)
         kategorie.appendChild(divArtikel);
 
         let bild: HTMLElement = document.createElement("img");
@@ -27,15 +26,6 @@ namespace Aufgabe07 {
         preis.setAttribute("class", "preis");
         preis.innerHTML = burger[i]._preis.toString();
         divArtikel.appendChild(preis);  
-        
-        let kaufen: HTMLButtonElement = document.createElement("button");
-        kaufen.innerText = "Kaufen";
-        kaufen.addEventListener("click", hinzufuegen);
-        kaufen.setAttribute("type", "button");
-        kaufen.setAttribute("artikelPreis", burger[i]._preis.toString());
-        kaufen.setAttribute("index", i + "");
-        kaufen.setAttribute("zähler", 0 + "");
-        divArtikel.appendChild(kaufen);
    
     }
     function preisAufbau(): void {
@@ -45,6 +35,12 @@ namespace Aufgabe07 {
             let j: number = parseInt(storageKey);
             addItem(j, burger);
             }
+        }
+        let deletebutton: HTMLButtonElement = document.getElementById("deleteButtonID") as HTMLButtonElement;
+        deletebutton.addEventListener("click", hndClear);
+        function hndClear(_event: Event): void {
+            localStorage.clear();
+            location.reload();
         }
         let gesamt: HTMLElement = document.querySelector("#summe") as HTMLElement;
         if (localStorage.getItem("summe") != null)

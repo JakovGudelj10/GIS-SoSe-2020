@@ -71,9 +71,9 @@ namespace Aufgabe07 {
     let zähler: string = (<HTMLButtonElement>_event.target)?.getAttribute("zähler")!;
     let ziel: HTMLButtonElement = _event.target as HTMLButtonElement;
     localStorage.setItem("summe", summe + "");
-    if (zähler == 0 + "") {
+    if (zähler == "0") {
         localStorage.setItem(id, zähler);
-        ziel.setAttribute("zähler", 1 + "");
+        ziel.setAttribute("zähler", "1");
 
     } else {
         let zähler2: number = parseInt(localStorage.getItem("id")!);
@@ -81,7 +81,7 @@ namespace Aufgabe07 {
         localStorage.setItem(id, zähler2 + "");
     }
     
-
+    ausgabe();
 
 }
 //Teilaufgabe2
@@ -123,6 +123,15 @@ namespace Aufgabe07 {
         document.getElementById("anker2")?.setAttribute("style", "display: block");
     }
 }
+    function ausgabe(): void {
+    for (let i: number = 0; i < localStorage.length; ++i) { 
+        let storageKey: string = localStorage.key(i) as string;
+        console.log(storageKey + ":" + localStorage.getItem(storageKey) );
+    }
+    console.log("__");
+
+}
+
 
 
 }

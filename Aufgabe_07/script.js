@@ -43,6 +43,7 @@ var Aufgabe07;
             kaufen.setAttribute("type", "button");
             kaufen.setAttribute("artikelPreis", Aufgabe07.burger[i]._preis.toString());
             kaufen.setAttribute("index", i + "");
+            kaufen.setAttribute("zähler", 0 + "");
             divArtikel.appendChild(kaufen);
         }
     }
@@ -56,9 +57,20 @@ var Aufgabe07;
         document.getElementById("einkaufswagen")?.appendChild(zahl);
         summe += parseFloat(_event.target?.getAttribute("artikelPreis"));
         console.log(summe);
-        let preis = _event.target?.getAttribute("artikelPreis");
         let id = _event.target?.getAttribute("index");
-        localStorage.setItem(id, preis);
+        let zähler = _event.target?.getAttribute("zähler");
+        let ziel = _event.target;
+        localStorage.setItem("summe", summe + "");
+        if (zähler == "0") {
+            localStorage.setItem(id, zähler);
+            ziel.setAttribute("zähler", "1");
+        }
+        else {
+            let zähler2 = parseInt(localStorage.getItem("id"));
+            zähler2++;
+            localStorage.setItem(id, zähler2 + "");
+        }
+        ausgabe();
     }
     //Teilaufgabe2
     let navDiv = document.createElement("div");
@@ -94,6 +106,13 @@ var Aufgabe07;
             document.getElementById("anker1")?.setAttribute("style", "display: block");
             document.getElementById("anker2")?.setAttribute("style", "display: block");
         }
+    }
+    function ausgabe() {
+        for (let i = 0; i < localStorage.length; ++i) {
+            let storageKey = localStorage.key(i);
+            console.log(storageKey + ":" + localStorage.getItem(storageKey));
+        }
+        console.log("__");
     }
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=script.js.map
