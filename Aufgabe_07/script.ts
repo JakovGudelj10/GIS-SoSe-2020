@@ -72,7 +72,7 @@ namespace Aufgabe07 {
     let ziel: HTMLButtonElement = _event.target as HTMLButtonElement;
     localStorage.setItem("summe", summe + "");
     if (zähler == "0") {
-        localStorage.setItem(id, zähler);
+        localStorage.setItem(id, zähler + 1);
         ziel.setAttribute("zähler", "1");
 
     } else {

@@ -21,6 +21,12 @@ var Aufgabe07;
         preis.setAttribute("class", "preis");
         preis.innerHTML = burger[i]._preis.toString();
         divArtikel.appendChild(preis);
+        let entfernen = document.createElement("button");
+        entfernen.setAttribute("class", "entfernen");
+        entfernen.setAttribute("index", i + "");
+        entfernen.setAttribute("preis", burger[i]._preis + "");
+        entfernen.innerHTML = "Artikel entfernen";
+        divArtikel.appendChild(entfernen);
     }
     function preisAufbau() {
         for (let i = 0; i < localStorage.length; ++i) {
@@ -45,12 +51,47 @@ var Aufgabe07;
     async function initWarenkorb() {
         await communicate("burger.json");
         preisAufbau();
+        createPayEvents();
     }
     initWarenkorb();
     async function communicate(_url) {
         let response = await fetch(_url);
         let respJSON = await response.json();
         Aufgabe07.burger = JSON.parse(JSON.stringify(respJSON));
+    }
+    function löschen(_event) {
+        let ziel = _event.target;
+        ziel.parentElement?.setAttribute("style", "display: none");
+        let index = ziel.getAttribute("index");
+        localStorage.removeItem(index);
+        ausgabe();
+        summeBerechnen();
+        let gesamt = document.querySelector("#summe");
+        gesamt.innerHTML = "Gesamtpreis: " + localStorage.getItem("summe") + " €";
+    }
+    function summeBerechnen() {
+        let gesamtwert = 0;
+        for (let i = 0; i < localStorage.length; ++i) {
+            if (localStorage.key(i) != "summe") {
+                let storageKey = localStorage.key(i);
+                let j = parseInt(storageKey);
+                gesamtwert += parseInt(localStorage.getItem(storageKey)) * Aufgabe07.burger[j]._preis;
+            }
+        }
+        localStorage.setItem("summe", gesamtwert + "");
+    }
+    function createPayEvents() {
+        let allDel = document.getElementsByClassName("entfernen");
+        for (let i = 0; i < allDel.length; i++) {
+            allDel[i].addEventListener("click", löschen);
+        }
+    }
+    function ausgabe() {
+        for (let i = 0; i < localStorage.length; ++i) {
+            let storageKey = localStorage.key(i);
+            console.log(storageKey + ":" + localStorage.getItem(storageKey));
+        }
+        console.log("__");
     }
 })(Aufgabe07 || (Aufgabe07 = {}));
 //# sourceMappingURL=warenkorb.js.map

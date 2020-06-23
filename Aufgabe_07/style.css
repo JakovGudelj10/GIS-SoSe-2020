@@ -170,9 +170,14 @@ button {
     color: white;
     padding: 5px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .warenkorb{
     text-align: center;
 
+}
+
+#gesamtwert{
+    margin-top: 50px;
 }

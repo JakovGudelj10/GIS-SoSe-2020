@@ -5,7 +5,7 @@ var Aufgabe08;
     button.addEventListener("click", buttonclk);
     function buttonclk(_event) {
         let formData = new FormData(document.forms[0]);
-        let url = "https://jakovgudeljgis.herokuapp.com/";
+        let url = "https://gissose2020gudeljja.herokuapp.com/";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
         addUrl(url);

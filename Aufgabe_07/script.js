@@ -62,7 +62,7 @@ var Aufgabe07;
         let ziel = _event.target;
         localStorage.setItem("summe", summe + "");
         if (zähler == "0") {
-            localStorage.setItem(id, zähler);
+            localStorage.setItem(id, zähler + 1);
             ziel.setAttribute("zähler", "1");
         }
         else {
