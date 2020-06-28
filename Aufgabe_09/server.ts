@@ -17,7 +17,7 @@ export namespace A09Server {
   }
 
   function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-    console.log("I hear voices!");
+    console.log("Hello World!");
 
     _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.setHeader("Access-Control-Allow-Origin", "*");
@@ -27,10 +27,10 @@ export namespace A09Server {
       let link: URL = new URL(_request.url, `http://${_request.headers.host}`);
 
 
-      let path: string = link.pathname;
-      switch (path) {
+      let pfad: string = link.pathname;
+      switch (pfad) {
           case "/html":
-              _response.setHeader("pathname", path);
+              _response.setHeader("pathname", pfad);
               for (let key in url.query) {
                   _response.write("<li>" + key + ": " + url.query[key]);  
               }
@@ -38,7 +38,7 @@ export namespace A09Server {
               break;
           case "/json":
               let urlJson: string = JSON.stringify(url.query);
-              _response.setHeader("pathname", path);
+              _response.setHeader("pathname", pfad);
               _response.write(urlJson);
               _response.end();
               break;

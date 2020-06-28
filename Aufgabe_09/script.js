@@ -1,13 +1,12 @@
 "use strict";
 var Aufgabe09;
 (function (Aufgabe09) {
-    let buttonHtml = document.getElementById("buttonHTML");
-    buttonHtml.addEventListener("click", communicateHTML);
-    let buttonJson = document.getElementById("buttonJSON");
-    buttonJson.addEventListener("click", communicateJSON);
+    document.getElementById("sendhtml")?.addEventListener("click", communicateHTML);
+    document.getElementById("sendjson")?.addEventListener("click", communicateJSON);
     let formData = new FormData(document.forms[0]);
     let url = "https://gissose2020gudeljja.herokuapp.com";
     let query = new URLSearchParams(formData);
+    let response;
     async function communicateHTML(_event) {
         url = url + "?" + query.toString();
         await communicate(url);

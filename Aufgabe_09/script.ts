@@ -1,15 +1,13 @@
 namespace Aufgabe09 {
 
 
-    let buttonHtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHTML");
-    buttonHtml.addEventListener("click", communicateHTML);
-
-    let buttonJson: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonJSON");
-    buttonJson.addEventListener("click", communicateJSON);
+    document.getElementById("sendhtml")?.addEventListener("click", communicateHTML);
+    document.getElementById("sendjson")?.addEventListener("click", communicateJSON);
 
     let formData: FormData = new FormData(document.forms[0]);
     let url: string = "https://gissose2020gudeljja.herokuapp.com";
     let query: URLSearchParams = new URLSearchParams(<any>formData);
+    let response: string;
 
     async function communicateHTML(_event: Event): Promise<void> {
         url = url + "?" + query.toString();

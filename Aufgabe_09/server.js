@@ -17,16 +17,16 @@ var A09Server;
         console.log("Listening");
     }
     function handleRequest(_request, _response) {
-        console.log("I hear voices!");
+        console.log("Hello World!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             let link = new URL(_request.url, `http://${_request.headers.host}`);
-            let path = link.pathname;
-            switch (path) {
+            let pfad = link.pathname;
+            switch (pfad) {
                 case "/html":
-                    _response.setHeader("pathname", path);
+                    _response.setHeader("pathname", pfad);
                     for (let key in url.query) {
                         _response.write("<li>" + key + ": " + url.query[key]);
                     }
@@ -34,7 +34,7 @@ var A09Server;
                     break;
                 case "/json":
                     let urlJson = JSON.stringify(url.query);
-                    _response.setHeader("pathname", path);
+                    _response.setHeader("pathname", pfad);
                     _response.write(urlJson);
                     _response.end();
                     break;
