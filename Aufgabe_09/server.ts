@@ -1,6 +1,7 @@
 import * as Http from "http";
+import * as Url from "url";
 
-export namespace A08Server {
+export namespace A09Server {
   console.log("Starting server");
   let port: number = Number(process.env.PORT);
   if (!port)
@@ -21,10 +22,32 @@ export namespace A08Server {
     _response.setHeader("content-type", "text/html; charset=utf-8");
     _response.setHeader("Access-Control-Allow-Origin", "*");
 
-    _response.write(_request.url);
+    if (_request.url) {
+      let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+      let link: URL = new URL(_request.url, `http://${_request.headers.host}`);
 
-    console.log(_request.url);
 
-    _response.end();
+      let path: string = link.pathname;
+      switch (path) {
+          case "/html":
+              _response.setHeader("pathname", path);
+              for (let key in url.query) {
+                  _response.write("<li>" + key + ": " + url.query[key]);  
+              }
+              _response.end();
+              break;
+          case "/json":
+              let urlJson: string = JSON.stringify(url.query);
+              _response.setHeader("pathname", path);
+              _response.write(urlJson);
+              _response.end();
+              break;
+           default:
+              _response.end();
+              break;
+
+      }
+
   }
+}
 }

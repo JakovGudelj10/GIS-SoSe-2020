@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.A08Server = void 0;
+exports.A09Server = void 0;
 const Http = require("http");
-var A08Server;
-(function (A08Server) {
+const Url = require("url");
+var A09Server;
+(function (A09Server) {
     console.log("Starting server");
     let port = Number(process.env.PORT);
     if (!port)
@@ -19,9 +20,29 @@ var A08Server;
         console.log("I hear voices!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url);
-        console.log(_request.url);
-        _response.end();
+        if (_request.url) {
+            let url = Url.parse(_request.url, true);
+            let link = new URL(_request.url, `http://${_request.headers.host}`);
+            let path = link.pathname;
+            switch (path) {
+                case "/html":
+                    _response.setHeader("pathname", path);
+                    for (let key in url.query) {
+                        _response.write("<li>" + key + ": " + url.query[key]);
+                    }
+                    _response.end();
+                    break;
+                case "/json":
+                    let urlJson = JSON.stringify(url.query);
+                    _response.setHeader("pathname", path);
+                    _response.write(urlJson);
+                    _response.end();
+                    break;
+                default:
+                    _response.end();
+                    break;
+            }
+        }
     }
-})(A08Server = exports.A08Server || (exports.A08Server = {}));
+})(A09Server = exports.A09Server || (exports.A09Server = {}));
 //# sourceMappingURL=server.js.map
