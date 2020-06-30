@@ -4,24 +4,24 @@ namespace Aufgabe09 {
     document.getElementById("sendjson")?.addEventListener("click", communicateJSON);
 
     async function communicateHTML(_event: Event): Promise<void> {
-        let url: string = "https://gissose2020gudeljja.herokuapp.com";
+        let url: string = "https://gissose2020gudeljja.herokuapp.com/html";
         //let url: string = "http://localhost:8100";
         let formData: FormData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        url = url + "/html?" + query.toString();
+        url = url + "?" + query.toString();
         let response: Response = await communicate(url);
         let text: string = await response.text();
         (<HTMLElement>document.getElementById("response")).innerHTML = text;
     }
 
     async function communicateJSON(_event: Event): Promise<void> {
-        let url: string = "https://gissose2020gudeljja.herokuapp.com";
+        let url: string = "https://gissose2020gudeljja.herokuapp.com/json";
         //let url: string = "http://localhost:8100";
         let formData: FormData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        url = url + "/json?" + query.toString();
+        url = url + "?" + query.toString();
         let response: Response = await communicate(url);
         // tslint:disable-next-line: no-any
         let ausgabe: any = await response.json();

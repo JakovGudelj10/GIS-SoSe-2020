@@ -4,23 +4,23 @@ var Aufgabe09;
     document.getElementById("sendhtml")?.addEventListener("click", communicateHTML);
     document.getElementById("sendjson")?.addEventListener("click", communicateJSON);
     async function communicateHTML(_event) {
-        let url = "https://gissose2020gudeljja.herokuapp.com";
+        let url = "https://gissose2020gudeljja.herokuapp.com/html";
         //let url: string = "http://localhost:8100";
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        url = url + "/html?" + query.toString();
+        url = url + "?" + query.toString();
         let response = await communicate(url);
         let text = await response.text();
         document.getElementById("response").innerHTML = text;
     }
     async function communicateJSON(_event) {
-        let url = "https://gissose2020gudeljja.herokuapp.com";
+        let url = "https://gissose2020gudeljja.herokuapp.com/json";
         //let url: string = "http://localhost:8100";
         let formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        url = url + "/json?" + query.toString();
+        url = url + "?" + query.toString();
         let response = await communicate(url);
         // tslint:disable-next-line: no-any
         let ausgabe = await response.json();
