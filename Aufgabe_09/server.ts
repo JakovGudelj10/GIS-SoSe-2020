@@ -25,8 +25,6 @@ export namespace A09Server {
     if (_request.url) {
       let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
       let link: URL = new URL(_request.url, `http://${_request.headers.host}`);
-
-
       let pfad: string = link.pathname;
       switch (pfad) {
           case "/html":

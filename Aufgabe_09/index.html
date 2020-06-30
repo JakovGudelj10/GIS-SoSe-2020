@@ -13,10 +13,16 @@
         <input type="text" name="fname" placeholder="Vorname"> <br>
         <input type="text" name="lname" placeholder="Nachname"> <br>
         <input type="text" name="email" placeholder="E-Mail"><br>
-        <input type="radio" name="mann"> Männlich <br>
-        <input type="radio" name="frau"> Weiblich <br>
-        <button type="button" id="senden">Jetzt Daten verkaufen</button>
+        <input type="radio" name="geschlecht" value="Mann" >
+        <label for="Mann"> Mann </label>
+        <br>
+        <input type="radio" name="geschlecht" value="Frau">
+        <label for="Frau"> Frau </label>
+        <br>
+        <button type="button" id="sendhtml">Jetzt Daten verkaufen</button>
+        <button type="button" id="sendjson">Nochmal</button>
     </form>
+    <p id ="response"></p>
 </body>
 
 </html>

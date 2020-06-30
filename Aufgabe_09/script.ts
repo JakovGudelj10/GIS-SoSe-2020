@@ -1,30 +1,35 @@
 namespace Aufgabe09 {
 
-
     document.getElementById("sendhtml")?.addEventListener("click", communicateHTML);
     document.getElementById("sendjson")?.addEventListener("click", communicateJSON);
 
-    let formData: FormData = new FormData(document.forms[0]);
-    let url: string = "https://gissose2020gudeljja.herokuapp.com";
-    let query: URLSearchParams = new URLSearchParams(<any>formData);
-    let response: string;
-
     async function communicateHTML(_event: Event): Promise<void> {
-        url = url + "?" + query.toString();
-        await communicate(url);
-        (<HTMLElement>document.getElementById("response")).innerHTML = response;
+        let url: string = "https://gissose2020gudeljja.herokuapp.com";
+        //let url: string = "http://localhost:8100";
+        let formData: FormData = new FormData(document.forms[0]);
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        url = url + "/html?" + query.toString();
+        let response: Response = await communicate(url);
+        let text: string = await response.text();
+        (<HTMLElement>document.getElementById("response")).innerHTML = text;
     }
 
     async function communicateJSON(_event: Event): Promise<void> {
-        url = url + "?" + query.toString();
-        await communicate(url);
-        let ausgabe: string = JSON.parse(response);
+        let url: string = "https://gissose2020gudeljja.herokuapp.com";
+        //let url: string = "http://localhost:8100";
+        let formData: FormData = new FormData(document.forms[0]);
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        url = url + "/json?" + query.toString();
+        let response: Response = await communicate(url);
+        // tslint:disable-next-line: no-any
+        let ausgabe: any = await response.json();
         console.log(ausgabe);
     }
 
-    async function communicate(_url: RequestInfo): Promise<void> {
-        let resp: Response = await fetch(_url);
-        let responsestring: string = await resp.text();
-        response = responsestring;
+    async function communicate(_url: string): Promise<Response> {
+        let response: Response = await fetch(_url);
+        return response;
     }
 }
