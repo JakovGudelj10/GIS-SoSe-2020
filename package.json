@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@types/node": "^14.0.14"
+    "@types/mongodb": "^3.5.25",
+    "@types/node": "^14.0.14",
+    "mongodb": "^3.5.9"
   },
   "scripts": {
     "start": "node Aufgabe_09/server.js"
@@ -19,5 +21,4 @@
     "url": "https://github.com/JakovGudelj10/GIS-SoSe-2020/issues"
   },
   "homepage": "https://github.com/JakovGudelj10/GIS-SoSe-2020#readme"
-
 }
