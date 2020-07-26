@@ -14,8 +14,7 @@ namespace Betreiberseite {
         let response: Response = await communicate("http://localhost:8100/empfangen");
         let bestellungen: Bestellen[] = (JSON.parse(await response.text()));
         for (let i = 0; i < bestellungen.length; i++) {
-            let div: HTMLElement = document.createElement("div");
-            
+            let div: HTMLElement = document.createElement("div");  
             
         }
 
