@@ -1,6 +1,5 @@
 import * as Http from "http";
 import * as Url from "url";
-import * as Mongo from "mongodb";
 
 export namespace A09Server {
     console.log("Starting server");
